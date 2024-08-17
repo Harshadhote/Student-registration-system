@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/BG\ img.jpg'); /* Replace with your image path */
+    
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+    /*header {
+        background: linear-gradient(45deg, 
+                                    rgba(0, 0, 0, 0.8) 0%,   
+                                    rgba(0, 0, 255, 0.8) 25%, 
+                                    rgba(255, 165, 0, 0.8) 50%, 
+                                    rgba(255, 255, 0, 0.8) 100%); 
+        background-size: 200% 200%;
+        animation: glitter 5s linear infinite;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    @keyframes glitter {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }*/
+    
+
+
+    header {
+        background: linear-gradient(to right, #000000, #C71585); /* Black to Dark Pink gradient */
+        color: #FFFFFF; /* White text for high contrast */
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        border-bottom: 5px solid #8B0A50; /* Optional darker shade for visual interest */
+    }
+    
+    header h1 {
+        font-size: 2.5rem; /* Adjust font size */
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for emphasis */
+    }
+    
+    header p {
+        font-size: 1.25rem; /* Adjust font size */
+        margin: 10px 0 0;
+        font-style: italic; /* Italicize the description for style */
+    }
+.form-section, .display-section {
+    background: linear-gradient(45deg, 
+                                rgba(0, 0, 0, 0.8) 0%,    /* Black */
+                                rgba(0, 0, 255, 0.8) 25%,  /* Blue */
+                                rgba(255, 192, 203, 0.8) 50%,  /* Pink */
+                                rgba(128, 0, 128, 0.8) 100%); /* Purple */
+    background-size: 200% 200%;
+    animation: glitter 5s linear infinite;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    overflow-x: auto; /* Ensure inner content is scrollable if necessary */
+}
+
+@keyframes glitter {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.form-section, .display-section {
+    background-color: rgba(207, 191, 191, 0.9); /* White with opacity */
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.1);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+.display-section{
+    border-radius: 12px;
+    box-sizing: border-box; 
+}
+h2{
+    text-align: center;
+}
+label{
+    border-radius: 12px;
+}
+.form-section h2, .display-section h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    
+}
+
+#btnregister{
+    background-color: #1a237e; /* Dark Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px ;
+    border: 1px solid black;
+}
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+
+button:hover {
+    background-color: #0d47a1; /* Lighter Blue */
+}
+
+
+
+
+.table-container {
+    max-height: 150px; /* Set a maximum height for the container */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    overflow-x: hidden; /*horizontal scrolling
+    scroll-behavior:smooth;
+    /* position: relative; */
+   
+}
+
+/* Customize scrollbar for webkit browsers */
+.table-container::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    margin-left: 2px;
+    height: 8px;
+}
+.table-container::-webkit-scrollbar-track {
+    background: rgb(28, 27, 27); /* Set the background of the scrollbar track */
+}
+
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #7a0ce8; /* Set the color of the scrollbar thumb */
+    border-radius: 50px; /* Add rounded corners to the scrollbar thumb */
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #2f8bcc; /* Set the color of the scrollbar thumb on hover */
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+   
+    /* overflow-x: auto; Allow horizontal scrolling if table is too wide */
+}
+thead {
+    background-color: #f2f2f2; /* Add background color to table header */
+    /* position: sticky; Make the header stick to the top */
+    top: 0; /* Position the header at the top */
+    z-index: 1; /* Ensure the header stays above other content */
+}
+
+th, td {
+    border: 2px solid #0f0f0f;
+    padding: 8px;
+    text-align: left;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+ 
+.actions button {
+    background-color: #1a237e; /* Dark Blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.actions button:hover {
+    background-color: green; /* Lighter Blue */
+}
+#btnregister:hover{
+    background-color: darkblue;   
+}
+
+ .edit-btn {
+    background-color: green; /* Dark green */
+    border-radius: 12px;
+}
+.edit-btn:hover{
+    background-color: darkgreen;
+}
+
+.actions .edit-btn:hover {
+    background-color: #0d47a1; /* Lighter Blue */
+}
+
+.actions .delete-btn {
+    background-color: #b71c1c; /* Red */
+
+}
+.delete-btn{
+    background-color: rgb(219, 33, 33);
+    border-radius: 12px;
+}
+.delete-btn:hover{
+    background-color: darkred;
+}
+
+.actions .delete-btn:hover {
+    background-color: #d32f2f; /* Lighter Red */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    header p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .form-section, .display-section {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+
+    table, th, td {
+        font-size: 0.9rem; /* Adjust font size for readability */
+    }
+
+    button[type="submit"] {
+        width: 80%; /* Make the button wider on smaller screens */
+        font-size: 1.2rem; /* Increase the font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Further adjust font size for very small screens */
+    }
+
+    header p {
+        font-size: 0.875rem; /* Further adjust font size for very small screens */
+    }
+
+    .form-section, .display-section {
+        width: 100%; /* Full width on very small screens */
+        padding: 10px; /* Reduce padding */
+    }
+
+    table, th, td {
+        font-size: 0.8rem; /* Further adjust font size */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Full width button */
+        font-size: 1.5rem; /* Further increase the font size */
+    }
+}
+
