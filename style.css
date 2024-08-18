@@ -9,6 +9,7 @@ body {
     z-index: 0;
     overflow-x: hidden;
 }
+
 #background-video {
     position: fixed;
     top: 0;
@@ -64,6 +65,7 @@ body::before {
         width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
         border-bottom: 5px solid #8B0A50; /* Optional darker shade for visual interest */
+        position: relative;
     }
     
     header h1 {
@@ -76,6 +78,21 @@ body::before {
         font-size: 1.25rem; /* Adjust font size */
         margin: 10px 0 0;
         font-style: italic; /* Italicize the description for style */
+    }
+    .logo {
+        position: absolute;
+        top: 10px; /* Adjust to position the logo vertically */
+        right: 10px; /* Adjust to position the logo horizontally */
+        margin-right: 20px;
+    }
+    
+    .logo img {
+        max-height: 50px; /* Adjust size as needed */
+    }
+    
+    .header-content {
+        text-align: center; /* Centers the text within the header */
+        margin-top: 20px; /* Adjust as needed to make space for the logo */
     }
 .form-section, .display-section {
     background: linear-gradient(45deg, 
